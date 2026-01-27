@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font1: "Sour Gummy", sans-serif;
+}
+
+* { 
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif; 
+}
+
+body { 
+    margin: auto; 
+    background: lightblue; 
+}
+
+header { 
+    background-image: linear-gradient(#025df0,#025);
+    box-shadow: 0px 0px 10px black; 
+    color: #fff; 
+    padding: 15px; 
+    text-align: center;
+}
+
+header > h1 {
+    font-family: var(--font1);
+    font-size: 3em;
+    padding-bottom: 10px;
+    margin: 10px 0;
+}
+
+nav {
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+    background: #025; 
+    padding: 10px;
+    border-bottom: 2px solid rgb(255, 255, 255); 
+}
+
+nav button { 
+    background: #e8eaee; 
+    color: #040000; 
+    border: none; 
+    padding: 8px 14px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+}
+
+nav button:hover { 
+    background: #000000;
+    color: white; 
+}
+
+section {
+    display: none; 
+    padding: 20px; 
+}
+
+section.active { 
+    display: block; 
+}
+
+.card { 
+    background: #fff; 
+    padding: 15px; 
+    border-radius: 6px; 
+    margin-bottom: 15px; 
+    box-shadow: 0 2px 6px rgba(0,0,0,.1); 
+}
+
+.hidden { 
+    display: none; 
+}
+
+input, textarea, select { 
+    width: 100%; 
+    padding: 8px; 
+    margin: 6px 0; 
+}
+
+.btn { 
+    background: #2563eb; 
+    color: #fff; 
+    border: none; 
+    padding: 8px 14px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+}
+
+.btn.danger { 
+    background: #dc2626; 
+}
+
+.countdown { font-weight: bold; color: #dc2626; }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aprememory - Plataforma de Estudos</title>
+        <link rel="stylesheet" href="estlos/style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+            <h1>APREMEMORY</h1>
+            <p>Aprendizado ativo, simples e acessível</p>
+        </header>
+
+        <nav class="hidden" id="menu">
+            <button onclick="showSection('dashboard')">Dashboard</button>
+            <button onclick="showSection('estudos')">Estudos</button>
+            <button onclick="showSection('noticias')">Notícias</button>
+            <button onclick="showSection('indicacao')">Indicação</button>
+            <button onclick="logout()">Sair</button>
+        </nav>
+
+        <section id="login" class="active">
+            <div class="card">
+                <h2>Login / Cadastro</h2>
+                <input type="email" id="email" placeholder="E-mail" />
+                <input type="password" id="senha" placeholder="Senha" />
+                <button class="btn" onclick="login()">Entrar / Cadastrar</button>
+            </div>
+        </section>
+
+        <section id="pagamento">
+            <div class="card">
+                <h2>Pagamento via Pix</h2>
+                <p>Escaneie o QR Code para liberar 30 dias de acesso</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PIX-DEMO" />
+                <button class="btn" onclick="confirmarPagamento()">Já paguei</button>
+            </div>
+        </section>
+
+        <section id="dashboard">
+            <div class="card">
+                <h2>Dashboard</h2>
+                <p>Acesso expira em: <span class="countdown" id="timer"></span></p>
+            </div>
+            <div class="card">
+                <h3>Concursos e Provas</h3>
+                <ul>
+                    <li><strong>ENEM – Novembro</strong></li>
+                    <li><strong>Concurso INSS – Previsto</strong></li>
+                    <li><strong>Concurso Polícia Federal – 2026</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="estudos">
+            <div class="card">
+                <h2>Métodos de Estudo</h2>
+                <textarea id="pergunta" placeholder="Digite sua pergunta"></textarea>
+                <textarea id="resposta" placeholder="Digite a resposta"></textarea>
+                <button class="btn" onclick="salvarEstudo()">Salvar</button>
+            </div>
+            <div class="card">
+                <h3>Conteúdo Salvo</h3>
+                <div id="listaEstudos"></div>
+
+            </div>
+        </section>
+
+        <section id="noticias">
+            <div class="card">
+                <h2>Notícias & Atualizações</h2>
+                <p>Dica: estude um pouco todos os dias para melhores resultados.</p>
+                <p>Nova funcionalidade em breve: <strong>Aulas ao vivo</strong>.</p>
+            </div>
+        </section>
+
+        <section id="indicacao">
+            <div class="card">
+                <h2>Programa de Indicação</h2>
+                <p>Seu código:</p>
+                <input readonly value="INDICA123" />
+                <p>Indique amigos e ganhe descontos.</p>
+            </div>
+        </section>
+
+    </body>
+</html>
