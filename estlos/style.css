@@ -95,3 +95,9 @@ input, textarea, select {
 }
 
 .countdown { font-weight: bold; color: #dc2626; }
+
+ul > li  a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
